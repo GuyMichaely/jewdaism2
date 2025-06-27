@@ -23,7 +23,7 @@ def proxy_file():
 def catch_all(path):
     # abort(404)
     ref = request.referrer
-    if ref and any(v in ref for v in [SECRET, 'guytest']:
+    if ref and any(v in ref for v in [SECRET, 'guytest']):
         print(f'{ref=}')
         return redirect(REMOTE_FILE_URL)
     return '', 404
