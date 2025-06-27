@@ -1,7 +1,6 @@
 import os
-from flask import Flask, Response, abort
+from flask import Flask, Response, abort, request
 from flask.helpers import redirect
-import requests
 
 app = Flask(__name__)
 
