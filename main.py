@@ -21,6 +21,7 @@ def proxy_file():
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def catch_all(path):
+    return redirect(REMOTE_FILE_URL)
     # abort(404)
     ref = request.referrer
     if ref and any(v in ref for v in [SECRET, 'guytest']):
