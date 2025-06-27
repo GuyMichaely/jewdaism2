@@ -1,3 +1,4 @@
+import os
 from flask import Flask, Response, abort
 from flask.helpers import redirect
 import requests
@@ -26,4 +27,4 @@ def catch_all(path):
 
 if __name__ == '__main__':
     print('hello world')
-    app.run()
+    app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000))
